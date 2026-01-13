@@ -1,5 +1,8 @@
 
 # Plant Seedlings Classification: From Scratch to Transfer Learning
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
+
+![alt text](SeedlingSample.png)
 
 This project documents the end-to-end process of building, training, and optimizing a deep learning model to classify 12 species of plant seedlings. The journey progresses from a custom Convolutional Neural Network (CNN) built from scratch to a highly effective model using transfer learning and data augmentation with PyTorch.
 
@@ -12,10 +15,13 @@ The project is structured as a series of four Jupyter notebooks, each building u
 1.  **[NB01] Data Exploration and Setup:** We begin by loading the dataset, performing an exploratory data analysis (EDA) to understand its characteristics, and visualizing the class distribution. A crucial step here is creating a standardized train/validation/test split and establishing a consistent preprocessing pipeline (resizing to 224x224 and normalizing with ImageNet stats) to prepare for transfer learning.
 
 2.  **[NB02] CNN from Scratch:** A baseline model is established by building a custom LeNet-style CNN. This model, trained from scratch, helps us understand the inherent challenges of the dataset and provides a performance benchmark. While achieving moderate accuracy, it shows clear signs of overfitting, highlighting the limitations of training deep networks on small datasets.
+![alt text](Scratch.png)
 
 3.  **[NB03] Transfer Learning with ResNet18:** To overcome the limitations of the scratch model, we employ transfer learning. We use a **ResNet18** model pretrained on ImageNet, freezing its convolutional backbone and training only a new, custom classifier head. This "feature extraction" approach dramatically improves accuracy and training efficiency, proving the power of leveraging pre-learned features.
+![alt text](ResnetTransfer.png)
 
 4.  **[NB04] Data Augmentation for Robustness:** In the final notebook, we enhance the transfer learning model by introducing data augmentation. By applying random transformations like flips, rotations, and color jitter during training, we artificially expand the dataset. This forces the model to learn more robust and generalizable features, making it less sensitive to variations in orientation and lighting.
+![alt text](ResnetAndAugment.png)
 
 ## Repository Structure
 
